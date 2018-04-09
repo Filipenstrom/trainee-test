@@ -1,0 +1,71 @@
+swagger: '2.0'
+info:
+  description: 'This is a sample of the One Elevator coding test REST API '
+  version: '2017.12'
+  title: One Elevator
+host: 'localhost:8080'
+basePath: /api/v1
+tags:
+  - name: administration
+    description: Utility methods
+  - name: elevators
+    description: Everything about your elevator.
+schemes:
+  - http
+paths:
+  /ping:
+    get:
+      tags:
+        - administration
+      summary: Check if the REST API service is alive.
+      operationId: ping
+      produces:
+        - text/plain
+      responses:
+        '200':
+          description: OK
+          examples:
+            text/plain: pong
+  /elevators:
+    get:
+      tags:
+        - elevators
+      summary: Get all elevators
+      operationId: getAllElevators
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Elevator'
+definitions:
+  Elevator:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+        description: Elevator Id
+      direction:
+        type: string
+        description: The direction of the elevator
+        enum:
+          - UP
+          - DOWN
+          - NONE
+  ApiResponse:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      type:
+        type: string
+      message:
+        type: string
+externalDocs:
+  description: Find out more about Swagger
+  url: 'http://swagger.io'
