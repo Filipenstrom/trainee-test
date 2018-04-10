@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package makinganagrams;
+package Solution;
 import java.io.*;
 import java.util.*;
 import java.text.*;
@@ -14,7 +14,7 @@ import java.util.regex.*;
  *
  * @author filip
  */
-public class MakingAnagrams {
+public class Solution {
 
     
     public static int[] charCount(String first){

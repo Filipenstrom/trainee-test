@@ -3,22 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fullcountingsort;
+package Solution;
 import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
+
 /**
  *
  * @author filip
  */
-public class FullCountingSort {
+public class Solution {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) throws Exception{
+ public static void main(String[] args) throws Exception{
         // TODO code application logic here
          BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(in.readLine());

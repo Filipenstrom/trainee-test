@@ -3,21 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package davisstaircase;
+package Solution;
 import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
-
 /**
  *
  * @author filip
  */
-public class DavisStairCase {
+public class Solution {
 
-    
-     public static int countPaths1(int steps){
+      public static int countPaths1(int steps){
         if(steps < 0){
             return 0;
         }
